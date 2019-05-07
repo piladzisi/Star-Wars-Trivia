@@ -18,6 +18,7 @@
 		4F15702D22815C7200ED7AD5 /* Starjhol.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F15702A22815C7200ED7AD5 /* Starjhol.ttf */; };
 		4F157031228165EF00ED7AD5 /* BlackBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F157030228165EF00ED7AD5 /* BlackBackgroundView.swift */; };
 		4F157034228166B600ED7AD5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F157033228166B600ED7AD5 /* Constants.swift */; };
+		4F9E22442281B710002DE0AA /* PersonApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9E22432281B710002DE0AA /* PersonApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		4F15702A22815C7200ED7AD5 /* Starjhol.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjhol.ttf; sourceTree = "<group>"; };
 		4F157030228165EF00ED7AD5 /* BlackBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackBackgroundView.swift; sourceTree = "<group>"; };
 		4F157033228166B600ED7AD5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4F9E22432281B710002DE0AA /* PersonApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonApi.swift; sourceTree = "<group>"; };
 		DBE5902F55240BEC8174D101 /* Pods-StarTrivia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarTrivia.debug.xcconfig"; path = "Target Support Files/Pods-StarTrivia/Pods-StarTrivia.debug.xcconfig"; sourceTree = "<group>"; };
 		FE30109DE4DFB74A673C20EE /* Pods_StarTrivia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarTrivia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -74,6 +76,7 @@
 				4F1570272281594400ED7AD5 /* Controller */,
 				4F1570262281593E00ED7AD5 /* Model */,
 				4F1570252281593300ED7AD5 /* View */,
+				4F9E22422281B6F1002DE0AA /* Services */,
 				4F157032228166A200ED7AD5 /* Utilities */,
 				4F15702F22815C9000ED7AD5 /* Resources */,
 				4F157013228157E100ED7AD5 /* AppDelegate.swift */,
@@ -134,13 +137,20 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		4F9E22422281B6F1002DE0AA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4F9E22432281B710002DE0AA /* PersonApi.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		FE0F1A311F7FB72DF4C96E97 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				DBE5902F55240BEC8174D101 /* Pods-StarTrivia.debug.xcconfig */,
 				3BBE152C7EBFA8729DEF2C40 /* Pods-StarTrivia.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -255,6 +265,7 @@
 				4F157016228157E100ED7AD5 /* SelectPersonVC.swift in Sources */,
 				4F157031228165EF00ED7AD5 /* BlackBackgroundView.swift in Sources */,
 				4F157014228157E100ED7AD5 /* AppDelegate.swift in Sources */,
+				4F9E22442281B710002DE0AA /* PersonApi.swift in Sources */,
 				4F157034228166B600ED7AD5 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
