@@ -35,7 +35,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Wo-pD-M9c">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Wo-pD-M9c" customClass="BlackBgView" customModule="StarTrivia" customModuleProvider="target">
                                 <rect key="frame" x="20" y="320.5" width="374" height="255"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NyK-xY-Q4U">
@@ -173,14 +173,27 @@
                                     <constraint firstItem="NyK-xY-Q4U" firstAttribute="top" secondItem="3Wo-pD-M9c" secondAttribute="top" constant="20" id="sll-WP-Aj1"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLE-Zx-Fb1" customClass="BlackBgButton" customModule="StarTrivia" customModuleProvider="target">
+                                <rect key="frame" x="87" y="789" width="240" height="43"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="5GA-19-QLC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="19"/>
+                                <state key="normal" title="$ Random #">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Wo-pD-M9c" secondAttribute="trailing" constant="20" id="7xb-sF-qHY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d7c-vT-65v" secondAttribute="trailing" constant="20" id="CP6-Dj-u2a"/>
+                            <constraint firstItem="cLE-Zx-Fb1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dir-Se-yx1"/>
                             <constraint firstItem="3Wo-pD-M9c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="DnC-AG-v5w"/>
                             <constraint firstItem="d7c-vT-65v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="GrK-6A-qu6"/>
                             <constraint firstItem="3Wo-pD-M9c" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Oln-Vd-drG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cLE-Zx-Fb1" secondAttribute="bottom" constant="30" id="Rij-YB-BIe"/>
                             <constraint firstItem="d7c-vT-65v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="adE-KU-86Z"/>
                             <constraint firstItem="fW9-fb-ebM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bvz-oM-wXQ"/>
                             <constraint firstAttribute="bottom" secondItem="fW9-fb-ebM" secondAttribute="bottom" id="mLx-E7-LrB"/>
@@ -191,9 +204,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="xYy-Un-64L"/>
-                    <connections>
-                        <outlet property="stackBackground" destination="3Wo-pD-M9c" id="8fd-5s-oHA"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

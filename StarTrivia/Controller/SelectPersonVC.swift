@@ -10,11 +10,10 @@ import UIKit
 
 class SelectPersonVC: UIViewController {
 
-    @IBOutlet weak var stackBackground: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        stackBackground.layer.cornerRadius = 10
     }
 
 
