@@ -22,14 +22,22 @@ class SelectPersonVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //step 1: make networking request
-        personApi.getRandomPersonUrlSession { (person) in
+        
+   }
+
+    @IBAction func randomClicked(_ sender: Any) {
+        let random = Int.random(in: 1...87)
+        personApi.getRandomPersonUrlSession(id: random) { (person) in
             if let person = person {
-                print(person.name)
+                self.nameLabel.text = person.name
+                self.heightLabel.text = person.height
+                self.massLabel.text = person.mass
+                self.hairLabel.text = person.hair
+                self.birthYearLabel.text = person.birthYear
+                self.genderLabel.text = person.gender
             }
         }
-        //
     }
-
-
+    
 }
 
