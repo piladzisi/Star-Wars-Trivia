@@ -16,6 +16,10 @@ class SelectPersonVC: UIViewController {
     @IBOutlet weak var hairLabel: UILabel!
     @IBOutlet weak var birthYearLabel: UILabel!
     @IBOutlet weak var genderLabel: UILabel!
+    @IBOutlet weak var homeworldButton: UIButton!
+    @IBOutlet weak var vehiclesButton: UIButton!
+    @IBOutlet weak var starshipsButton: UIButton!
+    @IBOutlet weak var filmsButton: UIButton!
     
     var personApi = PersonApi()
     
@@ -64,6 +68,18 @@ class SelectPersonVC: UIViewController {
         }
         
     }
+    
+    @IBAction func homeworldClicked(_ sender: Any) {
+    }
+    
+    @IBAction func vehiclesClicked(_ sender: Any) {
+    }
+    
+    @IBAction func starshipsClicked(_ sender: Any) {
+    }
+    @IBAction func filmsClicked(_ sender: Any) {
+    }
+    
 }
 
 
