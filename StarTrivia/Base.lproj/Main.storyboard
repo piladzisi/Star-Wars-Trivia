@@ -193,7 +193,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="nsm-Bp-nab">
                                         <rect key="frame" x="20" y="20" width="334" height="35"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZT-6p-FgX">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZT-6p-FgX" customClass="FadeEnabledButton" customModule="StarTrivia" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="35" id="JiD-4K-rb4"/>
@@ -204,7 +204,7 @@
                                                     <action selector="homeworldClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mL0-X4-j9a"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oT9-vc-WbN">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oT9-vc-WbN" customClass="FadeEnabledButton" customModule="StarTrivia" customModuleProvider="target">
                                                 <rect key="frame" x="99.5" y="0.0" width="35" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="1eK-CU-ryT"/>
@@ -215,7 +215,7 @@
                                                     <action selector="vehiclesClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0ug-G9-Wq4"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bA-MY-qcD">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bA-MY-qcD" customClass="FadeEnabledButton" customModule="StarTrivia" customModuleProvider="target">
                                                 <rect key="frame" x="199.5" y="0.0" width="35" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="35" id="9Tb-6c-WGk"/>
@@ -226,7 +226,7 @@
                                                     <action selector="starshipsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Sp-Wm-IZg"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trT-jO-bbC">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trT-jO-bbC" customClass="FadeEnabledButton" customModule="StarTrivia" customModuleProvider="target">
                                                 <rect key="frame" x="299" y="0.0" width="35" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="65U-EF-j5y"/>

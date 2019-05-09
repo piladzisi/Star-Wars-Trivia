@@ -56,19 +56,29 @@ class SelectPersonVC: UIViewController {
         getRandomPersonCodableSwift5(id: random) { (res) in
             switch res {
             case .success(let person):
-                self.nameLabel.text = person.name
-                self.heightLabel.text = person.height
-                self.massLabel.text = person.mass
-                self.hairLabel.text = person.hair_color
-                self.birthYearLabel.text = person.birth_year
-                self.genderLabel.text = person.gender
+                self.setupView(person: person)
             case .failure(let err):
                 print("Failed to fetch person:", err)
             }
         }
         
     }
-    
+    func setupView(person: Person) {
+        nameLabel.text = person.name
+        heightLabel.text = person.height
+        massLabel.text = person.mass
+        hairLabel.text = person.hair_color
+        birthYearLabel.text = person.birth_year
+        genderLabel.text = person.gender
+        
+        homeworldButton.isEnabled = !person.homeworld.isEmpty
+        vehiclesButton.isEnabled = !person.vehicles.isEmpty
+        starshipsButton.isEnabled = !person.starships.isEmpty
+        filmsButton.isEnabled = !person.films.isEmpty
+        
+        
+        
+    }
     @IBAction func homeworldClicked(_ sender: Any) {
     }
     
