@@ -9,29 +9,29 @@
 import Foundation
 
 
-struct Person: Codable {
+struct Person: Decodable {
     let name: String
     let height: String
     let mass: String
-    let hair: String
-    let birthYear: String
+    let hair_color: String
+    let birth_year: String
     let gender: String
-    let homeworldUrl: String
-    let filmUrls: [String]
-    let vehicleUrls: [String]
-    let starshipUrls: [String]
+    let homeworld: String
+    let films: [String]
+    let vehicles: [String]
+    let starships: [String]
     
-    
-    enum CodingKeys: String, CodingKey {
-        case name
-        case height
-        case mass
-        case hair = "hair_color"
-        case birthYear = "birth_year"
-        case gender
-        case homeworldUrl = "homeworld"
-        case filmUrls = "films"
-        case vehicleUrls = "vehicles"
-        case starshipUrls = "sharships"
-    }
+//    
+//    enum CodingKeys: String, CodingKey {
+//        case name
+//        case height
+//        case mass
+//        case hair = "hair_color"
+//        case birthYear = "birth_year"
+//        case gender
+//        case homeworld
+//        case films
+//        case vehicles
+//        case starships
+//    }
 }

@@ -21,23 +21,49 @@ class SelectPersonVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //step 1: make networking request
+      }
+    
+        //Web request with  Codable Swift 5
         
-   }
+        fileprivate func getRandomPersonCodableSwift5(id: Int, completion: @escaping (Result<Person, Error>) -> ()) {
+            
+            guard let url = URL(string: "\(PERSON_URL)\(id)") else { return }
+            URLSession.shared.dataTask(with: url) { (data, resp, err) in
+                
+                if let err = err {
+                    completion(.failure(err))
+                    return
+                }
+                do {
+                    let person = try JSONDecoder().decode(Person.self, from: data!)
+                    DispatchQueue.main.async {
+                        completion(.success(person))
+                    }
+                  } catch let jsonError {
+                    completion(.failure(jsonError))
+                }
+            }.resume()
+        }
+        
+
 
     @IBAction func randomClicked(_ sender: Any) {
         let random = Int.random(in: 1...87)
-        personApi.getRandomPersonAlamofire(id: random) { (person) in
-            if let person = person {
+        getRandomPersonCodableSwift5(id: random) { (res) in
+            switch res {
+            case .success(let person):
                 self.nameLabel.text = person.name
                 self.heightLabel.text = person.height
                 self.massLabel.text = person.mass
-                self.hairLabel.text = person.hair
-                self.birthYearLabel.text = person.birthYear
+                self.hairLabel.text = person.hair_color
+                self.birthYearLabel.text = person.birth_year
                 self.genderLabel.text = person.gender
+            case .failure(let err):
+                print("Failed to fetch person:", err)
             }
         }
+        
     }
-    
 }
+
 
