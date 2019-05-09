@@ -21,6 +21,10 @@
 		4F9E22442281B710002DE0AA /* PersonApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9E22432281B710002DE0AA /* PersonApi.swift */; };
 		4F9E224622829A74002DE0AA /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9E224522829A74002DE0AA /* Person.swift */; };
 		4FB9211E2284644E002A6167 /* FadeEnabeledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB9211D2284644E002A6167 /* FadeEnabeledButton.swift */; };
+		4FB9212022846943002A6167 /* HomeworldVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB9211F22846943002A6167 /* HomeworldVC.swift */; };
+		4FB921222284694F002A6167 /* VehiclesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB921212284694F002A6167 /* VehiclesVC.swift */; };
+		4FB921242284695C002A6167 /* StarshipsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB921232284695C002A6167 /* StarshipsVC.swift */; };
+		4FB9212622846968002A6167 /* FilmsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB9212522846968002A6167 /* FilmsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		4F9E22432281B710002DE0AA /* PersonApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonApi.swift; sourceTree = "<group>"; };
 		4F9E224522829A74002DE0AA /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		4FB9211D2284644E002A6167 /* FadeEnabeledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeEnabeledButton.swift; sourceTree = "<group>"; };
+		4FB9211F22846943002A6167 /* HomeworldVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworldVC.swift; sourceTree = "<group>"; };
+		4FB921212284694F002A6167 /* VehiclesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesVC.swift; sourceTree = "<group>"; };
+		4FB921232284695C002A6167 /* StarshipsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipsVC.swift; sourceTree = "<group>"; };
+		4FB9212522846968002A6167 /* FilmsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsVC.swift; sourceTree = "<group>"; };
 		DBE5902F55240BEC8174D101 /* Pods-StarTrivia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarTrivia.debug.xcconfig"; path = "Target Support Files/Pods-StarTrivia/Pods-StarTrivia.debug.xcconfig"; sourceTree = "<group>"; };
 		FE30109DE4DFB74A673C20EE /* Pods_StarTrivia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarTrivia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -113,6 +121,10 @@
 			isa = PBXGroup;
 			children = (
 				4F157015228157E100ED7AD5 /* SelectPersonVC.swift */,
+				4FB9211F22846943002A6167 /* HomeworldVC.swift */,
+				4FB921212284694F002A6167 /* VehiclesVC.swift */,
+				4FB921232284695C002A6167 /* StarshipsVC.swift */,
+				4FB9212522846968002A6167 /* FilmsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -295,10 +307,14 @@
 			files = (
 				4FB9211E2284644E002A6167 /* FadeEnabeledButton.swift in Sources */,
 				4F9E224622829A74002DE0AA /* Person.swift in Sources */,
+				4FB921242284695C002A6167 /* StarshipsVC.swift in Sources */,
+				4FB921222284694F002A6167 /* VehiclesVC.swift in Sources */,
 				4F157016228157E100ED7AD5 /* SelectPersonVC.swift in Sources */,
 				4F157031228165EF00ED7AD5 /* BlackBackgroundView.swift in Sources */,
 				4F157014228157E100ED7AD5 /* AppDelegate.swift in Sources */,
 				4F9E22442281B710002DE0AA /* PersonApi.swift in Sources */,
+				4FB9212622846968002A6167 /* FilmsVC.swift in Sources */,
+				4FB9212022846943002A6167 /* HomeworldVC.swift in Sources */,
 				4F157034228166B600ED7AD5 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
