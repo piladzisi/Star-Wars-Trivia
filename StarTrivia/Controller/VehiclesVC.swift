@@ -10,6 +10,8 @@ import UIKit
 
 class VehiclesVC: UIViewController, PersonProtocol {
     
+    
+    
     @IBOutlet weak var vhnameLabel: UILabel!
     @IBOutlet weak var vhmodelLabel: UILabel!
     @IBOutlet weak var vhmanufLabel: UILabel!
@@ -18,7 +20,7 @@ class VehiclesVC: UIViewController, PersonProtocol {
     @IBOutlet weak var vhspeedLabel: UILabel!
     @IBOutlet weak var vhcrewLabel: UILabel!
     @IBOutlet weak var vhpassengLabel: UILabel!
-    
+
     var person: Person!
     var vehicle: Vehicle!
     var vehicleApi = VehicleApi()
@@ -29,8 +31,7 @@ class VehiclesVC: UIViewController, PersonProtocol {
         vehicleApi.getVehicle(url: url) { (res) in
             switch res {
             case .success(let vehicle):
-                print(vehicle)
-                self.setupView(vehicle: vehicle)
+               self.setupView(vehicle: vehicle)
                 self.vehicle = vehicle
             case .failure(let err):
                 print("Failed to fetch homeworld:", err)
@@ -46,7 +47,8 @@ class VehiclesVC: UIViewController, PersonProtocol {
         vhspeedLabel.text = vehicle.max_atmosphering_speed
         vhcrewLabel.text = vehicle.crew
         vhpassengLabel.text = vehicle.passengers
-        
+
     }
-   
+
 }
+
