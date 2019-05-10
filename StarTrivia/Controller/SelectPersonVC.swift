@@ -57,23 +57,33 @@ class SelectPersonVC: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toHomeworld" {
+        
+        switch segue.identifier {
+        case Segue.homeworld.rawValue:
             if let destination = segue.destination as? HomeworldVC {
                 destination.person = person
             }
-        } else if segue.identifier  == "toVehicles" {
+        case Segue.vehicles.rawValue:
             if let destination = segue.destination as? VehiclesVC {
                 destination.person = person
             }
-        } else if segue.identifier  == "toStarships" {
+        case Segue.starships.rawValue:
             if let destination = segue.destination as? StarshipsVC {
                 destination.person = person
             }
-        } else if segue.identifier  == "toFilms" {
+        case Segue.films.rawValue:
             if let destination = segue.destination as? FilmsVC {
                 destination.person = person
             }
+        default:
+            break
         }
+    }
     
+    enum Segue: String {
+        case homeworld = "toHomeworld"
+        case vehicles = "toVehicles"
+        case starships = "toStarships"
+        case films = "toFilms"
     }
 }
