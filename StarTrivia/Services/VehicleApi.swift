@@ -1,5 +1,5 @@
 //
-//  HomeworldApi.swift
+//  VehicleApi.swift
 //  StarTrivia
 //
 //  Created by anna.sibirtseva on 10/05/2019.
@@ -8,25 +8,20 @@
 
 import Foundation
 
+class VehicleApi{
 
-//Web request with  Codable Swift 5
-
-class HomeworldApi {
-    
-
-func getHomeworld(url: String, completion: @escaping (Result<Homeworld, Error>) -> ()) {
+func getVehicle(url: String, completion: @escaping (Result<Vehicle, Error>) -> ()) {
     
     guard let url = URL(string: url) else { return }
     URLSession.shared.dataTask(with: url) { (data, resp, err) in
-        
         if let err = err {
             completion(.failure(err))
             return
         }
         do {
-            let homeworld = try JSONDecoder().decode(Homeworld.self, from: data!)
+            let vehicle = try JSONDecoder().decode(Vehicle.self, from: data!)
             DispatchQueue.main.async {
-                completion(.success(homeworld))
+                completion(.success(vehicle))
             }
         } catch let jsonError {
             completion(.failure(jsonError))
@@ -34,5 +29,3 @@ func getHomeworld(url: String, completion: @escaping (Result<Homeworld, Error>) 
         }.resume()
     }
 }
-
-

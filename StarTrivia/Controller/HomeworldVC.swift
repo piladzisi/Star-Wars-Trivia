@@ -11,27 +11,28 @@ import UIKit
 class HomeworldVC: UIViewController, PersonProtocol {
     
     @IBOutlet weak var hwnameLabel: UILabel!
-     @IBOutlet weak var hwclimateLabel: UILabel!
-   
+    @IBOutlet weak var hwclimateLabel: UILabel!
     @IBOutlet weak var hwterrainLabel: UILabel!
-    
     @IBOutlet weak var hwpopulationLabel: UILabel!
+    
     var person: Person!
     var homeworld: Homeworld!
+    var homeworldApi = HomeworldApi()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let url = person.homeworld
-        getHomeworld(url: url) { (res) in
+        homeworldApi.getHomeworld(url: url) { (res) in
             switch res {
             case .success(let homeworld):
-                self.setupView(homeworld: homeworld)
+               self.setupView(homeworld: homeworld)
                  self.homeworld = homeworld
             case .failure(let err):
                 print("Failed to fetch homeworld:", err)
             }
         }
     }
+    
     func setupView(homeworld: Homeworld) {
         hwnameLabel.text = homeworld.name
         hwclimateLabel.text = homeworld.climate

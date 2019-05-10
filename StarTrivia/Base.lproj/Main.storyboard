@@ -521,9 +521,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space3" translatesAutoresizingMaskIntoConstraints="NO" id="mvO-0v-FQP">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Vehicles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="B40-sa-yr6">
                                 <rect key="frame" x="20" y="108" width="374" height="80"/>
                                 <fontDescription key="fontDescription" name="StarJediOutline" family="Star Jedi Outline" pointSize="50"/>
@@ -703,29 +700,75 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="b0D-6C-m6y" secondAttribute="trailing" constant="20" id="72E-TH-fgt"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="b0D-6C-m6y" secondAttribute="bottom" constant="20" id="8QQ-ak-Jnh"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="346" id="b2z-fR-BdJ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="346" id="aXH-pX-XSP"/>
                                     <constraint firstItem="b0D-6C-m6y" firstAttribute="top" secondItem="mJv-iB-tUM" secondAttribute="topMargin" constant="20" id="fzB-b6-2Q0"/>
                                     <constraint firstItem="b0D-6C-m6y" firstAttribute="leading" secondItem="mJv-iB-tUM" secondAttribute="leading" constant="20" id="mgi-wW-R9k"/>
                                     <constraint firstItem="b0D-6C-m6y" firstAttribute="centerY" secondItem="mJv-iB-tUM" secondAttribute="centerY" id="o5q-ku-Hlh"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cqn-Er-zBT">
+                                <rect key="frame" x="20" y="782" width="107" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="e6X-ZS-Eig"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="20"/>
+                                <state key="normal" title="Previous">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="randomClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yk9-D4-Sit"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ioZ-4I-tP1">
+                                <rect key="frame" x="314" y="782" width="80" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="OoR-pD-nNg"/>
+                                    <constraint firstAttribute="width" constant="80" id="mnJ-ah-NGp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="20"/>
+                                <state key="normal" title="next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="randomClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9ZU-Xm-yKr"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space3" translatesAutoresizingMaskIntoConstraints="NO" id="mvO-0v-FQP">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="mvO-0v-FQP" secondAttribute="bottom" id="2KQ-Nr-a7i"/>
                             <constraint firstItem="7jQ-ca-G88" firstAttribute="trailing" secondItem="B40-sa-yr6" secondAttribute="trailing" constant="20" id="6fL-kZ-Gti"/>
+                            <constraint firstItem="Cqn-Er-zBT" firstAttribute="leading" secondItem="7jQ-ca-G88" secondAttribute="leading" constant="20" id="8Xh-5R-jBZ"/>
                             <constraint firstItem="mvO-0v-FQP" firstAttribute="leading" secondItem="7jQ-ca-G88" secondAttribute="leading" id="DPG-ck-wBl"/>
+                            <constraint firstItem="7jQ-ca-G88" firstAttribute="bottom" secondItem="Cqn-Er-zBT" secondAttribute="bottom" constant="20" id="Gxv-2e-c8T"/>
                             <constraint firstItem="mvO-0v-FQP" firstAttribute="top" secondItem="UqT-YI-w2f" secondAttribute="top" id="JIs-uh-TgQ"/>
                             <constraint firstItem="mJv-iB-tUM" firstAttribute="leading" secondItem="7jQ-ca-G88" secondAttribute="leading" constant="20" id="Jm2-cU-fiA"/>
                             <constraint firstItem="B40-sa-yr6" firstAttribute="leading" secondItem="7jQ-ca-G88" secondAttribute="leading" constant="20" id="JmO-gX-vGh"/>
                             <constraint firstItem="mJv-iB-tUM" firstAttribute="centerY" secondItem="UqT-YI-w2f" secondAttribute="centerY" priority="750" id="T3e-Gg-wOi"/>
+                            <constraint firstItem="7jQ-ca-G88" firstAttribute="trailing" secondItem="ioZ-4I-tP1" secondAttribute="trailing" constant="20" id="WXG-u1-i97"/>
                             <constraint firstItem="B40-sa-yr6" firstAttribute="top" secondItem="7jQ-ca-G88" secondAttribute="top" constant="20" id="YNd-0j-lvX"/>
+                            <constraint firstItem="7jQ-ca-G88" firstAttribute="bottom" secondItem="ioZ-4I-tP1" secondAttribute="bottom" constant="20" id="YUh-0v-d6X"/>
                             <constraint firstItem="7jQ-ca-G88" firstAttribute="trailing" secondItem="mJv-iB-tUM" secondAttribute="trailing" constant="20" id="oKB-Dx-lu9"/>
                             <constraint firstItem="7jQ-ca-G88" firstAttribute="trailing" secondItem="mvO-0v-FQP" secondAttribute="trailing" id="oaW-go-GOz"/>
                             <constraint firstItem="mJv-iB-tUM" firstAttribute="top" relation="greaterThanOrEqual" secondItem="B40-sa-yr6" secondAttribute="bottom" constant="20" id="tHt-Ms-P7a"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7jQ-ca-G88"/>
                     </view>
+                    <connections>
+                        <outlet property="vhcostLabel" destination="tba-HA-RlX" id="aHY-LP-bK3"/>
+                        <outlet property="vhcrewLabel" destination="Eux-ZX-LxQ" id="kSW-CJ-VBL"/>
+                        <outlet property="vhlengthLabel" destination="Bqt-d7-YrP" id="07P-sG-eK3"/>
+                        <outlet property="vhmanufLabel" destination="VVg-HZ-SHW" id="cps-bA-dBZ"/>
+                        <outlet property="vhmodelLabel" destination="NCq-7b-bFo" id="NZ7-Mt-NAe"/>
+                        <outlet property="vhnameLabel" destination="fRo-AI-hv2" id="I3o-Cd-PUf"/>
+                        <outlet property="vhpassengLabel" destination="SyR-au-pxl" id="RkZ-zm-LKN"/>
+                        <outlet property="vhspeedLabel" destination="nJe-RK-gR7" id="AN1-Dv-VVM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mt0-wD-r70" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
