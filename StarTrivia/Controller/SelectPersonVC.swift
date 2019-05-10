@@ -22,6 +22,7 @@ class SelectPersonVC: UIViewController {
     @IBOutlet weak var filmsButton: UIButton!
     
     var personApi = PersonApi()
+    var person: Person!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,7 @@ class SelectPersonVC: UIViewController {
             switch res {
             case .success(let person):
                 self.setupView(person: person)
+                self.person = person
             case .failure(let err):
                 print("Failed to fetch person:", err)
             }
@@ -54,9 +56,24 @@ class SelectPersonVC: UIViewController {
     }
     
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toHomeworld" {
+            if let destination = segue.destination as? HomeworldVC {
+                destination.person = person
+            }
+        } else if segue.identifier  == "toVehicles" {
+            if let destination = segue.destination as? VehiclesVC {
+                destination.person = person
+            }
+        } else if segue.identifier  == "toStarships" {
+            if let destination = segue.destination as? StarshipsVC {
+                destination.person = person
+            }
+        } else if segue.identifier  == "toFilms" {
+            if let destination = segue.destination as? FilmsVC {
+                destination.person = person
+            }
+        }
     
-    
-    
+    }
 }
-
-

@@ -9,11 +9,11 @@
 import UIKit
 
 class FilmsVC: UIViewController {
-
+    var person: Person!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        print(person.films)
     }
     
 
