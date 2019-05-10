@@ -15,3 +15,10 @@ class BlackBgView: UIView {
         layer.cornerRadius = 10 
     }
 }
+
+class BlackBgButton: UIButton {
+    override func awakeFromNib() {
+        layer.backgroundColor = BLACK_BG
+        layer.cornerRadius = 10
+    }
+}

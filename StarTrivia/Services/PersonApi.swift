@@ -12,26 +12,29 @@ import Foundation
 
 class PersonApi {
     
-//    //Web request with  Codable Swift 5
-//    
-//    func getRandomPersonCodableSwift5(id: Int, completion: @escaping (Result<Person, Error>) -> ()) {
-//        
-//        guard let url = URL(string: "\(PERSON_URL)\(id)") else { return }
-//        URLSession.shared.dataTask(with: url) { (data, resp, err) in
-//            
-//            if let err = err {
-//                completion(.failure(err))
-//                return
-//            }
-//            do {
-//                let person = try JSONDecoder().decode(Person.self, from: data!)
-//                completion(.success(person))
-//            } catch let jsonError {
-//                completion(.failure(jsonError))
-//            }
-//        }.resume()
-//    }
+    //Web request with  Codable Swift 5
     
+    func getRandomPersonCodableSwift5(id: Int, completion: @escaping (Result<Person, Error>) -> ()) {
+        
+        guard let url = URL(string: "\(PERSON_URL)\(id)") else { return }
+        URLSession.shared.dataTask(with: url) { (data, resp, err) in
+            
+            if let err = err {
+                completion(.failure(err))
+                return
+            }
+            do {
+                let person = try JSONDecoder().decode(Person.self, from: data!)
+                DispatchQueue.main.async {
+                    completion(.success(person))
+                }
+            } catch let jsonError {
+                completion(.failure(jsonError))
+            }
+            }.resume()
+    }
+    
+
     //Web request with Alamofire and Codable
     
 //    func getRandomPersonAlamofireCodable(id: Int, completion: @escaping (Person?) -> Void) {
