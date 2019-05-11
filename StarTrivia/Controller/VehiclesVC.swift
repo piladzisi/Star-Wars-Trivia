@@ -77,17 +77,19 @@ class VehiclesVC: UIViewController, PersonProtocol {
     
     func setButtonState() {
         
-        if currentVehicle == 0 {
-            previousButton.isEnabled = false
-        } else {
-            previousButton.isEnabled = true
-        }
-        
-        if currentVehicle == vehicles.count - 1 {
-            nextButton.isEnabled = false
-        } else {
-            nextButton.isEnabled = true
-        }
+        nextButton.isEnabled = currentVehicle == vehicles.count - 1 ? false : true
+        previousButton.isEnabled = currentVehicle == 0 ? false : true 
+//        if currentVehicle == 0 {
+//            previousButton.isEnabled = false
+//        } else {
+//            previousButton.isEnabled = true
+//        }
+//
+//        if currentVehicle == vehicles.count - 1 {
+//            nextButton.isEnabled = false
+//        } else {
+//            nextButton.isEnabled = true
+//        }
         
         getVehicle(url: vehicles[currentVehicle])
     }
