@@ -14,8 +14,10 @@ class StarshipsVC: UIViewController, PersonProtocol {
     @IBOutlet weak var stmodelLabel: UILabel!
     @IBOutlet weak var stmanufLabel: UILabel!
     @IBOutlet weak var stcostLabel: UILabel!
-     @IBOutlet weak var stlengthLable: UILabel!
+     @IBOutlet weak var stlengthLabel: UILabel!
    
+    @IBOutlet weak var sthyperdriveLabel: UILabel!
+    @IBOutlet weak var stclassLabel: UILabel!
     @IBOutlet weak var stspeedLabel: UILabel!
     @IBOutlet weak var stcrewLabel: UILabel!
     @IBOutlet weak var stpassengLabel: UILabel!
@@ -56,10 +58,12 @@ class StarshipsVC: UIViewController, PersonProtocol {
             stmodelLabel.text = starship.model
             stmanufLabel.text = starship.manufacturer
             stcostLabel.text = starship.cost_in_credits
-            stlengthLable.text = starship.length
+            stlengthLabel.text = starship.length
             stspeedLabel.text = starship.max_atmosphering_speed
             stcrewLabel.text = starship.crew
             stpassengLabel.text = starship.passengers
+            stclassLabel.text = starship.starship_class
+            sthyperdriveLabel.text = starship.hyperdrive_rating
             
         }
     @IBAction func previousClicked(_ sender: Any) {
