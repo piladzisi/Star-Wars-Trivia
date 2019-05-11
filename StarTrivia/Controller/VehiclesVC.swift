@@ -20,24 +20,39 @@ class VehiclesVC: UIViewController, PersonProtocol {
     @IBOutlet weak var vhspeedLabel: UILabel!
     @IBOutlet weak var vhcrewLabel: UILabel!
     @IBOutlet weak var vhpassengLabel: UILabel!
-
+    
+    @IBOutlet weak var previousButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
+    
+    
     var person: Person!
     var vehicle: Vehicle!
     var vehicleApi = VehicleApi()
+    var vehicles = [String]()
+    var currentVehicle = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = person.vehicles[0]
+        vehicles = person.vehicles
+        previousButton.isEnabled = false
+        nextButton.isEnabled = vehicles.count > 1 // true if more than 1 item in array
+        guard let firstVehicleUrl = person.vehicles.first else { return }
+        getVehicle(url: firstVehicleUrl)
+    }
+    
+    func getVehicle(url: String) {
         vehicleApi.getVehicle(url: url) { (res) in
             switch res {
             case .success(let vehicle):
-               self.setupView(vehicle: vehicle)
+                self.setupView(vehicle: vehicle)
                 self.vehicle = vehicle
             case .failure(let err):
                 print("Failed to fetch homeworld:", err)
             }
         }
     }
+    
+    
     func setupView(vehicle: Vehicle) {
         vhnameLabel.text = vehicle.name
         vhmodelLabel.text = vehicle.model
@@ -47,8 +62,34 @@ class VehiclesVC: UIViewController, PersonProtocol {
         vhspeedLabel.text = vehicle.max_atmosphering_speed
         vhcrewLabel.text = vehicle.crew
         vhpassengLabel.text = vehicle.passengers
-
+        
     }
-
+    
+    @IBAction func previousClicked(_ sender: Any) {
+        currentVehicle -= 1
+        setButtonState()
+    }
+    
+    @IBAction func nextClicked(_ sender: Any) {
+        currentVehicle += 1
+        setButtonState()
+    }
+    
+    func setButtonState() {
+        
+        if currentVehicle == 0 {
+            previousButton.isEnabled = false
+        } else {
+            previousButton.isEnabled = true
+        }
+        
+        if currentVehicle == vehicles.count - 1 {
+            nextButton.isEnabled = false
+        } else {
+            nextButton.isEnabled = true
+        }
+        
+        getVehicle(url: vehicles[currentVehicle])
+    }
 }
 
