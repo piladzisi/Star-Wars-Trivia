@@ -55,7 +55,8 @@ class FilmsVC: UIViewController, PersonProtocol {
         fldirectorLabel.text = film.director
         flproducerLabel.text = film.producer
         flreleasedLabel.text = film.release_date
-        crawlLabel.text = film.opening_crawl
+        let stripped = film.opening_crawl.replacingOccurrences(of: "\n", with: " ")
+        crawlLabel.text = stripped.replacingOccurrences(of: "\r", with: "")
         
     }
   
