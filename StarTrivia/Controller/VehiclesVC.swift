@@ -47,7 +47,7 @@ class VehiclesVC: UIViewController, PersonProtocol {
                 self.setupView(vehicle: vehicle)
                 self.vehicle = vehicle
             case .failure(let err):
-                print("Failed to fetch homeworld:", err)
+                print("Failed to fetch vehicle:", err)
             }
         }
     }
@@ -78,7 +78,8 @@ class VehiclesVC: UIViewController, PersonProtocol {
     func setButtonState() {
         
         nextButton.isEnabled = currentVehicle == vehicles.count - 1 ? false : true
-        previousButton.isEnabled = currentVehicle == 0 ? false : true 
+        previousButton.isEnabled = currentVehicle == 0 ? false : true
+        
 //        if currentVehicle == 0 {
 //            previousButton.isEnabled = false
 //        } else {
