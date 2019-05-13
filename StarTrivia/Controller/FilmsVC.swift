@@ -17,6 +17,7 @@ class FilmsVC: UIViewController, PersonProtocol {
     @IBOutlet weak var flreleasedLabel: UILabel!
     @IBOutlet weak var crawlLabel: UITextView!
     
+    @IBOutlet weak var bgimage: UIImageView!
     @IBOutlet weak var previousButton: FadeEnabledButton!
     
     @IBOutlet weak var nextButton: FadeEnabledButton!
@@ -34,6 +35,7 @@ class FilmsVC: UIViewController, PersonProtocol {
         nextButton.isEnabled = films.count > 1 // true if more than 1 item in array
         guard let firstFilmUrl = person.films.first else { return }
         getFilm(url: firstFilmUrl)
+        self.view.sendSubviewToBack(bgimage)
     }
     
     func getFilm(url: String) {

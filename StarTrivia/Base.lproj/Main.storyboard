@@ -785,19 +785,17 @@
                                     <action selector="randomClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nv3-Mh-pwt"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YtK-8U-kHF">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="space2" translatesAutoresizingMaskIntoConstraints="NO" id="iEN-Ra-k0N">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Vdy-Xy-Kxv" firstAttribute="centerY" secondItem="bsd-qb-tVo" secondAttribute="centerY" priority="750" id="0y7-hd-8rs"/>
-                            <constraint firstItem="YtK-8U-kHF" firstAttribute="top" secondItem="bsd-qb-tVo" secondAttribute="top" id="Ck1-4w-p7X"/>
                             <constraint firstItem="0Vy-te-YXe" firstAttribute="trailing" secondItem="Vdy-Xy-Kxv" secondAttribute="trailing" constant="20" id="I0p-IP-vDc"/>
                             <constraint firstItem="s0g-bl-OXf" firstAttribute="top" secondItem="0Vy-te-YXe" secondAttribute="top" constant="20" id="IpX-zh-EOg"/>
                             <constraint firstAttribute="bottom" secondItem="EAI-5T-c6q" secondAttribute="bottom" constant="20" id="Ma5-hH-JGg"/>
-                            <constraint firstItem="0Vy-te-YXe" firstAttribute="trailing" secondItem="YtK-8U-kHF" secondAttribute="trailing" id="Psz-4o-jyK"/>
-                            <constraint firstItem="YtK-8U-kHF" firstAttribute="leading" secondItem="0Vy-te-YXe" secondAttribute="leading" id="XJ5-Ye-0we"/>
                             <constraint firstItem="s0g-bl-OXf" firstAttribute="leading" secondItem="0Vy-te-YXe" secondAttribute="leading" constant="20" id="cVz-mg-JH8"/>
                             <constraint firstItem="0Vy-te-YXe" firstAttribute="trailing" secondItem="EAI-5T-c6q" secondAttribute="trailing" constant="20" id="hy0-yW-LTg"/>
                             <constraint firstItem="CvG-zX-YjM" firstAttribute="top" secondItem="Vdy-Xy-Kxv" secondAttribute="bottom" constant="20" id="jht-Ea-gdE"/>
@@ -805,12 +803,12 @@
                             <constraint firstAttribute="bottom" secondItem="CvG-zX-YjM" secondAttribute="bottom" constant="20" id="n23-Lp-Q5O"/>
                             <constraint firstItem="Vdy-Xy-Kxv" firstAttribute="top" secondItem="s0g-bl-OXf" secondAttribute="bottom" constant="40" id="oUx-3J-Hdq"/>
                             <constraint firstItem="CvG-zX-YjM" firstAttribute="leading" secondItem="0Vy-te-YXe" secondAttribute="leading" constant="20" id="r3U-lI-cUh"/>
-                            <constraint firstAttribute="bottom" secondItem="YtK-8U-kHF" secondAttribute="bottom" id="tmA-Wy-iGh"/>
                             <constraint firstItem="Vdy-Xy-Kxv" firstAttribute="leading" secondItem="0Vy-te-YXe" secondAttribute="leading" constant="20" id="u9L-Z8-CCV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0Vy-te-YXe"/>
                     </view>
                     <connections>
+                        <outlet property="bgimage" destination="iEN-Ra-k0N" id="b9C-Sp-hRW"/>
                         <outlet property="crawlLabel" destination="aPT-qa-cbG" id="IMW-Hj-gNC"/>
                         <outlet property="fldirectorLabel" destination="npQ-In-0Pe" id="MK5-Xo-GIk"/>
                         <outlet property="flepisodeLabel" destination="Uoh-CH-kNm" id="GWe-bN-Igd"/>
@@ -1259,6 +1257,7 @@
         <image name="homeworld" width="460" height="864"/>
         <image name="homeworld_icon" width="50" height="50"/>
         <image name="space1" width="699" height="1120"/>
+        <image name="space2" width="329" height="610"/>
         <image name="space3" width="470" height="877"/>
         <image name="space4" width="278" height="488"/>
         <image name="starships" width="50" height="50"/>
