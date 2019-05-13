@@ -21,6 +21,8 @@ class SelectPersonVC: UIViewController {
     @IBOutlet weak var starshipsButton: UIButton!
     @IBOutlet weak var filmsButton: UIButton!
     
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
     var personApi = PersonApi()
     var person: Person!
     
@@ -30,7 +32,9 @@ class SelectPersonVC: UIViewController {
     
     @IBAction func randomClicked(_ sender: Any) {
         let random = Int.random(in: 1...87)
+        spinner.startAnimating()
         personApi.getRandomPersonCodableSwift5(id: random) { (res) in
+            self.spinner.stopAnimating()
             switch res {
             case .success(let person):
                 self.setupView(person: person)
@@ -38,6 +42,7 @@ class SelectPersonVC: UIViewController {
             case .failure(let err):
                 print("Failed to fetch person:", err)
             }
+            
         }
     }
     

@@ -177,108 +177,113 @@
                                     <constraint firstItem="NyK-xY-Q4U" firstAttribute="top" secondItem="3Wo-pD-M9c" secondAttribute="top" constant="20" id="sll-WP-Aj1"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="XAZ-sM-A59">
-                                <rect key="frame" x="20" y="695" width="374" height="147"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zI8-iO-6hV" customClass="BlackBgView" customModule="StarTrivia" customModuleProvider="target">
+                                <rect key="frame" x="20" y="638" width="374" height="67"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zI8-iO-6hV" customClass="BlackBgView" customModule="StarTrivia" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="67"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" distribution="equalSpacing" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="nsm-Bp-nab">
+                                        <rect key="frame" x="20" y="16" width="334" height="35"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" distribution="equalSpacing" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="nsm-Bp-nab">
-                                                <rect key="frame" x="20" y="16" width="334" height="35"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZT-6p-FgX" customClass="FadeEnabledButton" customModule="StarTrivia" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="35" id="JiD-4K-rb4"/>
-                                                            <constraint firstAttribute="height" constant="35" id="afT-aA-a7l"/>
-                                                        </constraints>
-                                                        <state key="normal" image="homeworld_icon"/>
-                                                        <connections>
-                                                            <segue destination="RoT-gv-LIl" kind="show" identifier="toHomeworld" id="r5I-vq-kBX"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oT9-vc-WbN" customClass="FadeEnabledButton" customModule="StarTrivia" customModuleProvider="target">
-                                                        <rect key="frame" x="99.5" y="0.0" width="35" height="35"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="35" id="1eK-CU-ryT"/>
-                                                            <constraint firstAttribute="width" constant="35" id="Dhs-dQ-Gd9"/>
-                                                        </constraints>
-                                                        <state key="normal" image="vehicles"/>
-                                                        <connections>
-                                                            <segue destination="lOe-t3-0uT" kind="show" identifier="toVehicles" id="JbO-Bi-lzx"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bA-MY-qcD" customClass="FadeEnabledButton" customModule="StarTrivia" customModuleProvider="target">
-                                                        <rect key="frame" x="199.5" y="0.0" width="35" height="35"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="35" id="9Tb-6c-WGk"/>
-                                                            <constraint firstAttribute="height" constant="35" id="JTd-96-mGI"/>
-                                                        </constraints>
-                                                        <state key="normal" image="starships"/>
-                                                        <connections>
-                                                            <segue destination="rzl-eE-KYb" kind="show" identifier="toStarships" id="Cqf-Qx-EkW"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trT-jO-bbC" customClass="FadeEnabledButton" customModule="StarTrivia" customModuleProvider="target">
-                                                        <rect key="frame" x="299" y="0.0" width="35" height="35"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="35" id="65U-EF-j5y"/>
-                                                            <constraint firstAttribute="width" constant="35" id="rUN-ZF-WVW"/>
-                                                        </constraints>
-                                                        <state key="normal" image="films"/>
-                                                        <connections>
-                                                            <segue destination="ras-K1-fPA" kind="show" identifier="toFilms" id="3S4-Vm-bkM"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZT-6p-FgX" customClass="FadeEnabledButton" customModule="StarTrivia" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="35" id="JiD-4K-rb4"/>
+                                                    <constraint firstAttribute="height" constant="35" id="afT-aA-a7l"/>
+                                                </constraints>
+                                                <state key="normal" image="homeworld_icon"/>
+                                                <connections>
+                                                    <segue destination="RoT-gv-LIl" kind="show" identifier="toHomeworld" id="r5I-vq-kBX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oT9-vc-WbN" customClass="FadeEnabledButton" customModule="StarTrivia" customModuleProvider="target">
+                                                <rect key="frame" x="99.5" y="0.0" width="35" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="1eK-CU-ryT"/>
+                                                    <constraint firstAttribute="width" constant="35" id="Dhs-dQ-Gd9"/>
+                                                </constraints>
+                                                <state key="normal" image="vehicles"/>
+                                                <connections>
+                                                    <segue destination="lOe-t3-0uT" kind="show" identifier="toVehicles" id="JbO-Bi-lzx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bA-MY-qcD" customClass="FadeEnabledButton" customModule="StarTrivia" customModuleProvider="target">
+                                                <rect key="frame" x="199.5" y="0.0" width="35" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="35" id="9Tb-6c-WGk"/>
+                                                    <constraint firstAttribute="height" constant="35" id="JTd-96-mGI"/>
+                                                </constraints>
+                                                <state key="normal" image="starships"/>
+                                                <connections>
+                                                    <segue destination="rzl-eE-KYb" kind="show" identifier="toStarships" id="Cqf-Qx-EkW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trT-jO-bbC" customClass="FadeEnabledButton" customModule="StarTrivia" customModuleProvider="target">
+                                                <rect key="frame" x="299" y="0.0" width="35" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="65U-EF-j5y"/>
+                                                    <constraint firstAttribute="width" constant="35" id="rUN-ZF-WVW"/>
+                                                </constraints>
+                                                <state key="normal" image="films"/>
+                                                <connections>
+                                                    <segue destination="ras-K1-fPA" kind="show" identifier="toFilms" id="3S4-Vm-bkM"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="nsm-Bp-nab" secondAttribute="trailing" constant="20" id="KVB-4g-6q5"/>
-                                            <constraint firstAttribute="height" constant="67" id="SFL-Nj-TvS"/>
-                                            <constraint firstItem="nsm-Bp-nab" firstAttribute="leading" secondItem="zI8-iO-6hV" secondAttribute="leading" constant="20" id="cjK-Nb-eqT"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="nsm-Bp-nab" secondAttribute="bottom" constant="8" id="due-zV-Niv"/>
-                                            <constraint firstItem="nsm-Bp-nab" firstAttribute="centerY" secondItem="zI8-iO-6hV" secondAttribute="centerY" id="mrt-oj-9G3"/>
-                                            <constraint firstItem="nsm-Bp-nab" firstAttribute="top" secondItem="zI8-iO-6hV" secondAttribute="topMargin" constant="8" id="t2A-2N-1bC"/>
-                                        </constraints>
-                                    </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLE-Zx-Fb1" customClass="BlackBgButton" customModule="StarTrivia" customModuleProvider="target">
-                                        <rect key="frame" x="67" y="87" width="240" height="60"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="240" id="5GA-19-QLC"/>
-                                            <constraint firstAttribute="height" constant="60" id="vXt-Ds-LiO"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="19"/>
-                                        <state key="normal" title="$ Random #">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="randomClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pxc-3K-DUe"/>
-                                        </connections>
-                                    </button>
+                                    </stackView>
                                 </subviews>
-                            </stackView>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="SFL-Nj-TvS"/>
+                                    <constraint firstAttribute="trailing" secondItem="nsm-Bp-nab" secondAttribute="trailing" constant="20" id="Xxv-fe-aLC"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="nsm-Bp-nab" secondAttribute="bottom" constant="8" id="due-zV-Niv"/>
+                                    <constraint firstAttribute="bottom" secondItem="nsm-Bp-nab" secondAttribute="bottom" constant="16" id="k0s-XI-c4g"/>
+                                    <constraint firstItem="nsm-Bp-nab" firstAttribute="leading" secondItem="zI8-iO-6hV" secondAttribute="leading" constant="20" id="m50-pq-ulA"/>
+                                    <constraint firstItem="nsm-Bp-nab" firstAttribute="centerY" secondItem="zI8-iO-6hV" secondAttribute="centerY" id="mrt-oj-9G3"/>
+                                    <constraint firstItem="nsm-Bp-nab" firstAttribute="top" secondItem="zI8-iO-6hV" secondAttribute="top" constant="16" id="sRK-X8-oky"/>
+                                    <constraint firstItem="nsm-Bp-nab" firstAttribute="top" secondItem="zI8-iO-6hV" secondAttribute="topMargin" constant="8" id="t2A-2N-1bC"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLE-Zx-Fb1" customClass="BlackBgButton" customModule="StarTrivia" customModuleProvider="target">
+                                <rect key="frame" x="87" y="782" width="240" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="5GA-19-QLC"/>
+                                    <constraint firstAttribute="height" constant="60" id="vXt-Ds-LiO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="19"/>
+                                <state key="normal" title="$ Random #">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="randomClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pxc-3K-DUe"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="VgB-9A-8MS">
+                                <rect key="frame" x="188.5" y="725" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="cLE-Zx-Fb1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5S8-yz-EsZ"/>
                             <constraint firstItem="3Wo-pD-M9c" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" priority="750" id="7E9-Lz-zta"/>
                             <constraint firstItem="fW9-fb-ebM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Bvz-aF-4FA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d7c-vT-65v" secondAttribute="trailing" constant="20" id="CP6-Dj-u2a"/>
                             <constraint firstItem="3Wo-pD-M9c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="DnC-AG-v5w"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Wo-pD-M9c" secondAttribute="trailing" constant="20" id="EyW-jd-OsD"/>
                             <constraint firstItem="d7c-vT-65v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="GrK-6A-qu6"/>
-                            <constraint firstItem="XAZ-sM-A59" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3Wo-pD-M9c" secondAttribute="bottom" priority="750" constant="20" id="aDk-E7-smf"/>
+                            <constraint firstItem="fW9-fb-ebM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IAS-Y1-Ppd"/>
+                            <constraint firstItem="VgB-9A-8MS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JjO-nk-4kA"/>
+                            <constraint firstItem="VgB-9A-8MS" firstAttribute="top" secondItem="zI8-iO-6hV" secondAttribute="bottom" constant="20" id="LWz-oE-T9d"/>
+                            <constraint firstItem="cLE-Zx-Fb1" firstAttribute="top" secondItem="VgB-9A-8MS" secondAttribute="bottom" constant="20" id="ZOx-BM-0go"/>
                             <constraint firstItem="d7c-vT-65v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="adE-KU-86Z"/>
-                            <constraint firstItem="zI8-iO-6hV" firstAttribute="width" secondItem="3Wo-pD-M9c" secondAttribute="width" id="bHY-tA-cml"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cLE-Zx-Fb1" secondAttribute="bottom" constant="20" id="bpx-xr-5aD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zI8-iO-6hV" secondAttribute="trailing" constant="20" id="esZ-fM-lC9"/>
+                            <constraint firstItem="zI8-iO-6hV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gle-gK-u2W"/>
                             <constraint firstAttribute="bottom" secondItem="fW9-fb-ebM" secondAttribute="bottom" id="mLx-E7-LrB"/>
                             <constraint firstItem="3Wo-pD-M9c" firstAttribute="top" relation="greaterThanOrEqual" secondItem="d7c-vT-65v" secondAttribute="bottom" constant="20" id="ocy-Q5-sJD"/>
-                            <constraint firstItem="XAZ-sM-A59" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ojK-pR-jGs"/>
                             <constraint firstItem="fW9-fb-ebM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ree-MK-6Dn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fW9-fb-ebM" secondAttribute="trailing" id="tn8-7D-YRO"/>
                             <constraint firstItem="d7c-vT-65v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="wGV-Hf-Uqv"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XAZ-sM-A59" secondAttribute="bottom" constant="20" id="yNa-bf-dYa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -292,6 +297,7 @@
                         <outlet property="homeworldButton" destination="eZT-6p-FgX" id="w2Z-vE-Szp"/>
                         <outlet property="massLabel" destination="D2R-ia-TTI" id="BL2-0N-g55"/>
                         <outlet property="nameLabel" destination="7bt-di-7zt" id="wr7-h1-Y05"/>
+                        <outlet property="spinner" destination="VgB-9A-8MS" id="Jj6-dW-P9m"/>
                         <outlet property="starshipsButton" destination="3bA-MY-qcD" id="0Td-Ob-R71"/>
                         <outlet property="vehiclesButton" destination="oT9-vc-WbN" id="kZ8-oO-TVk"/>
                     </connections>
