@@ -17,6 +17,7 @@ class PersonApi {
     func getRandomPersonCodableSwift5(id: Int, completion: @escaping (Result<Person, Error>) -> ()) {
         
         guard let url = URL(string: "\(PERSON_URL)\(id)") else { return }
+        print(url)
         URLSession.shared.dataTask(with: url) { (data, resp, err) in
             
             if let err = err {
